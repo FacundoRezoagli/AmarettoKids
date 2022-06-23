@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Cart } from "../Cart/Cart";
 import "./NavBar.css";
 
-const Navbar = () => {
+const Navbar = ({numero}) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="Navbar">
@@ -9,9 +10,11 @@ const Navbar = () => {
       <div className={`nav-items ${isOpen && "open"}`}>
         <a href="/home">Home</a>
         <a href="/niños">Niños</a>
-        <a href="/niñas">Niños</a>
+        <a href="/niñas">Niñas</a>
         <a href="/about">Acerca de nosotros</a>
+
       </div>
+      <Cart numero = {numero}/>
       <div
         className={`nav-toggle ${isOpen && "open"}`}
         onClick={() => setIsOpen(!isOpen)}

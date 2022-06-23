@@ -1,0 +1,30 @@
+.container
+{
+    width: 80px;
+    height: 22px;
+    cursor: pointer;
+    padding-right: 30px;
+}
+
+.container:hover
+{
+    color: white;
+}
+
+.cartNumber
+{
+    width: 25px; 
+    height: 25px;
+    font-size: medium;
+    /* margin-right: 15px; */
+    /* padding: 5px 10px; */
+    border-radius: 100%;  
+    /* align-items: center; */
+    /* color: black;
+    border: 1px solid black; */
+    background-color: aquamarine;
+    text-align: center;
+    position: relative;
+    left: 21px;
+    bottom: 23.5px;
+}
