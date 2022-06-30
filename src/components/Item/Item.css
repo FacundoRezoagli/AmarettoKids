@@ -1,0 +1,35 @@
+.cartAddButton
+{
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+}
+.amountButton
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+.itemImage
+{
+    height: 500px;
+}
+.itemContainer
+{
+    /* border: 1px solid red; */
+    text-align: center;
+    height: auto;
+    width: 3;
+}
+.itemStock
+{
+    font-size: medium;
+    margin-bottom: 10px
+}
+.itemDetailButton
+{
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+}

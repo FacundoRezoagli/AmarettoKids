@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Buzo Llamas",
+        "stock" : 10,
+        "imagen": "../../assets/Img/img1.jpg"
+    },
+    {
+        "nombre": "Camperon Azul",
+        "stock" : 10,
+        "imagen": "../../assets/Img/img2.jpg"
+    },
+    {
+        "nombre": "Gorro/Bufanda",
+        "stock" : 10,
+        "imagen": "../../assets/Img/img3.jpg"
+    }
+]
