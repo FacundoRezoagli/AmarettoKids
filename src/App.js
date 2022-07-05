@@ -1,13 +1,16 @@
 import './App.css';
 import Navbar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
     
 function App() {
   let numero = 1;
+  let key = 0;
   return (
     <div className="App">
       <Navbar numero = {numero}/>
       <ItemListContainer/>
+      <ItemDetailContainer key = {key}/>
     </div>
     
     // <BrowserRouter>       
