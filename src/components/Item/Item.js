@@ -1,7 +1,7 @@
 import {React, useState }from "react";
 import "./Item.css";
 
-const Item = ({stock , url, producto}) => {
+const Item = ({stock , url, producto, key}) => {
 
     const [contador, setContador] = useState(0);
 
@@ -13,7 +13,7 @@ const Item = ({stock , url, producto}) => {
     };
 
     return(
-        <div className="itemContainer">
+        <div className="itemContainer" >
 
             <h1 className="itemTitle">{producto}</h1>
             
@@ -32,3 +32,5 @@ const Item = ({stock , url, producto}) => {
     )
 }
 export default Item;
+
+

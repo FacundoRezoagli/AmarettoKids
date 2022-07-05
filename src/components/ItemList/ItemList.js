@@ -1,42 +1,30 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Item from "../Item/Item";
-import img1 from '../../assets/Img/img1.jpg'
-import img2 from '../../assets/Img/img2.jpg'
-import img3 from '../../assets/Img/img3.jpg'
+
 import './ItemList.css'
-export const ItemList = ({numero}) => {
-  
-const [products, setProducts] = useState(null)
-
-useEffect
-(
-  () => 
-  {
-    const getProducts = async() => 
-    {
-      try
-      {
-        const response = await fetch('/Mocks/productsData.json')
-        const data = await response.json()
-        console.log(data)
-        setProducts(data)
-      }
-      catch(error)
-      {
-        console.log("Hubo un error:")
-        console.log(error)
-      }
-    }
-
-    getProducts()
-  }, []
-)
+export const ItemList = ({products}) => {
+  console.log(products)
   return (
     <div className="itemListContainer">
-      <Item url = {img1} stock = {10} producto = {'Buzo Llamas'} />
-      <Item url = {img2} stock = {10} producto = {'Camperon Azul'}/>
-      <Item url = {img3} stock = {10} producto = {'Gorro/Bufanda'}/>
+
+      
+      {products.map((product) => (
+        <Item url = {product.imagen} stock = {product.stock} producto = {product.nombre}/>
+      ))}
+
+
     </div>
   );
 };
 export default ItemList;
+
+
+
+/* 
+import img1 from '../../assets/Img/img1.jpg'
+import img2 from '../../assets/Img/img2.jpg'
+import img3 from '../../assets/Img/img3.jpg'
+<Item url = {img1} stock = {10} producto = {'Buzo Llamas'} />
+<Item url = {img2} stock = {10} producto = {'Camperon Azul'}/>
+<Item url = {img3} stock = {10} producto = {'Gorro/Bufanda'}/> 
+*/
