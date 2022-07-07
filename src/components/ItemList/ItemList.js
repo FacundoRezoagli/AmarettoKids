@@ -3,13 +3,12 @@ import Item from "../Item/Item";
 
 import './ItemList.css'
 export const ItemList = ({products}) => {
-  console.log(products)
   return (
     <div className="itemListContainer">
 
       
       {products.map((product) => (
-        <Item url = {product.imagen} stock = {product.stock} producto = {product.nombre}/>
+        <Item url = {product.imagen} stock = {product.stock} producto = {product.nombre} cod = {product.cod}/>
       ))}
 
 

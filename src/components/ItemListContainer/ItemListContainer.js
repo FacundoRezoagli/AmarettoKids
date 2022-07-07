@@ -5,7 +5,7 @@ import Data from '../../Data/productsData'
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  console.log(Data);
+
 
 // useEffect
 // (
@@ -38,7 +38,6 @@ useEffect(() => {
     })
     .then((res) => setProducts(res))
 }, [])
-console.log(products)
   return(
     <div className='itemListContainerContainer'> 
     <ItemList products = {products}/>

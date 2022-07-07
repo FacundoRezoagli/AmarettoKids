@@ -1,19 +1,30 @@
 import './App.css';
 import Navbar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-    
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import NotFound from './components/NotFound/NotFound';
 function App() {
   let numero = 1;
-  let key = 0;
   return (
-    <div className="App">
-      <Navbar numero = {numero}/>
-      <ItemListContainer/>
-      <ItemDetailContainer key = {key}/>
-    </div>
-    
-    // <BrowserRouter>       
+    <BrowserRouter> 
+      <div className="App">
+        <Navbar numero = {numero}/>
+        <Routes> 
+        <Route path="/" element={<ItemListContainer />} />
+          <Route path="/home" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/detail/:productId" element ={<ItemDetailContainer/>} />
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter> 
+   
+  );
+}
+
+export default App;
+ // <BrowserRouter>       
     //   <Navbar numero={numero} />       
     //   <Routes>         
     //     <Route path="/" element={<ItemListContainer />} />         
@@ -21,8 +32,3 @@ function App() {
     //     {/* <Route path="/item/:productID" element={<ItemDetailContainer />} />        */}
     //   </Routes>    
     // </BrowserRouter>
-
-  );
-}
-
-export default App;

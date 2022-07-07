@@ -1,6 +1,6 @@
 let Data = [
     {
-        "id": 0,
+        "cod": 0,
         "nombre": "Botas bebe beige",
         "stock" : 10,
         "imagen": "https://images.pexels.com/photos/47220/shoes-pregnancy-child-clothing-47220.jpeg?cs=srgb&dl=pexels-pixabay-47220.jpg&fm=jpg",
@@ -8,7 +8,7 @@ let Data = [
         "itemDetail": "lorem ipsum blablabla descripcion de producto aqui"
     },
     {
-        "id": 1,
+        "cod": 1,
         "nombre": "Conjunto playa",
         "stock" : 5,
         "imagen": "https://4.imimg.com/data4/SK/QE/IMOB-8860847/8602705876_90183318-jpg-500x500.jpg",
@@ -16,7 +16,7 @@ let Data = [
         "itemDetail": "lorem ipsum blablabla descripcion de producto aqui"
     },
     {
-        "id": 2,
+        "cod": 2,
         "nombre": "Buzo Camo",
         "stock" : 8,
         "imagen": "https://www.burton.com/static/product/S23/16218112962_1.png?impolicy=bglt&imwidth=486",
