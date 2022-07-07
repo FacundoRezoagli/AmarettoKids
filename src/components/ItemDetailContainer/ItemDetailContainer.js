@@ -1,38 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import Data from '../../Data/productsData'
-import {ItemDetail} from '../ItemDetail/ItemDetail'
-
-export const ItemDetailContainer = ({key}) => {
-
-    const [productDetail, setProductDetail] = useState({});
-
-    useEffect(() => {
-        new Promise((resolve, reject) => {
-          resolve(Data.find((elemento) => elemento.id == key));
-          console.log(key)
-        })
-        .then((res) => setProductDetail(res))
-        console.log(productDetail)
-    }, [])
-    
+import React from "react";
+import  ItemDetail  from "../ItemDetail/ItemDetail";
 
 
-    // useEffect(() =>{
-    //     const getProductDetail = async () => {
-    //         try {
-    //             const response = await fetch('../../')
-                
-    //         } catch (error) {
-                
-    //         }
-    //     }
-    // })
-
+const ItemDetailContainer = () => {
   return (
-  <div>
-    <ItemDetail productDetail={productDetail}></ItemDetail>
-  </div>
-  )
-}
+    <div>
+      <ItemDetail></ItemDetail>
+    </div>
+  );
+};
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

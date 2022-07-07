@@ -1,27 +1,17 @@
-import React, {useState, useEffect}  from 'react'
+import React, {useState}  from 'react'
 import './ItemDetail.css'
+import { useParams } from "react-router-dom";
+import Data from "../../Data/productsData";
 
-export const ItemDetail = ({productDetail}) => {
-   const [detail, setdetail] = useState({});
-      // useEffect(() => 
-      // {
-      //   setdetail(productDetail)
-      //   console.log(detail)
-      // }, [])
-
-      const loadData = async () => {
-        setdetail(productDetail);
-    }
-    
-    useEffect(() => {
-        loadData();
-    }, [])
-
+const ItemDetail = () => {
+  const { productId } = useParams();
+  const item = Data.find((elemento) => elemento.cod.toString() === productId)
+  console.log(item)
   return (
     <div className='ItemDetail'>
-        <h1>{detail.nombre}</h1>
-        <img className='img' src={detail.imagen}></img>
-        <p>{detail.itemDetail}</p>
+        <h1>{item.nombre}</h1>
+        <img className='img' src={item.imagen}></img>
+        <p>{item.itemDetail}</p>
     </div>
   )
 }
