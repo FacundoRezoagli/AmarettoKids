@@ -1,5 +1,4 @@
 import {React, useState }from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
 import "./Item.css";
 import { useNavigate } from "react-router-dom";
 

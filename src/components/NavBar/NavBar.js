@@ -3,7 +3,7 @@ import { Cart } from "../Cart/Cart";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = ({numero}) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="Navbar">
@@ -15,7 +15,7 @@ const Navbar = ({numero}) => {
         <Link to="/about">Acerca de nosotros</Link>
 
       </div>
-      <Cart numero = {numero}/>
+      <Cart/>
       <div
         className={`nav-toggle ${isOpen && "open"}`}
         onClick={() => setIsOpen(!isOpen)}

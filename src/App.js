@@ -5,11 +5,10 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import NotFound from './components/NotFound/NotFound';
 function App() {
-  let numero = 1;
   return (
     <BrowserRouter> 
       <div className="App">
-        <Navbar numero = {numero}/>
+        <Navbar/>
         <Routes> 
         <Route path="/" element={<ItemListContainer />} />
           <Route path="/home" element={<ItemListContainer />} />
