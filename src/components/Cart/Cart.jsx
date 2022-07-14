@@ -4,13 +4,13 @@ import {BsCart4} from 'react-icons/bs'
 import { Shop } from '../ShopProvider/ShopProvider';
 export const Cart = () => {
 
-  const [number, setNumber] = useState(1);
+  const [number, setNumber] = useState(0);
 
   const {estadoA} = useContext(Shop);
   useEffect(() => {
   console.log(estadoA)
   setNumber(estadoA)
-  }, [])
+  }, [estadoA])
   
   return (
     <div className='cartContainer'>
