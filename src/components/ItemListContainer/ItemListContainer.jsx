@@ -6,32 +6,6 @@ import Data from '../../Data/productsData'
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
-
-// useEffect
-// (
-//   () => 
-//   {
-//     const getProducts = async() => 
-//     {
-//       try
-//       {
-//         const response = await fetch('/Mocks/productsData.json')
-//         const data = await response.json()
-//         console.log(data)
-//         setProducts(data)
-//       }
-//       catch(error)
-//       {
-//         console.log("Hubo un error:")
-//         console.log(error)
-//       }
-//     }
-
-//     getProducts()
-//   }, []
-// );
-
-
 useEffect(() => {
     new Promise((resolve, reject) => {
       resolve(Data)

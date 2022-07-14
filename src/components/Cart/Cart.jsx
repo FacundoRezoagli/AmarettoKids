@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import './Cart.css'
 import {BsCart4} from 'react-icons/bs'
+import { Shop } from '../ShopProvider/ShopProvider';
 export const Cart = () => {
-  let number = 0;
+
+  const [number, setNumber] = useState(1);
+
+  const {estadoA} = useContext(Shop);
+  useEffect(() => {
+  console.log(estadoA)
+  setNumber(estadoA)
+  }, [])
+  
   return (
     <div className='cartContainer'>
       <BsCart4/>

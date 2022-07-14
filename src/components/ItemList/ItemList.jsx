@@ -6,11 +6,9 @@ export const ItemList = ({products}) => {
   return (
     <div className="itemListContainer">
 
-      
       {products.map((product) => (
         <Item url = {product.imagen} stock = {product.stock} producto = {product.nombre} cod = {product.cod}/>
       ))}
-
 
     </div>
   );

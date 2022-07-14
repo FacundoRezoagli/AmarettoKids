@@ -4,8 +4,10 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import NotFound from './components/NotFound/NotFound';
+import ShopProvider from './components/ShopProvider/ShopProvider';
 function App() {
   return (
+  <ShopProvider>
     <BrowserRouter> 
       <div className="App">
         <Navbar/>
@@ -16,9 +18,10 @@ function App() {
           <Route path="/detail/:productId" element ={<ItemDetailContainer/>} />
           <Route path="*" element={<NotFound/>}/>
         </Routes>
+        
       </div>
     </BrowserRouter> 
-   
+   </ShopProvider> 
   );
 }
 
