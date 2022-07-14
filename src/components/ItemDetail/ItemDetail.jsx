@@ -36,9 +36,8 @@ const ItemDetail = () => {
     } else {
       //AGREGAR AL CARRIRIJILLO
       alert( "se agregaron : "+`${btnClick}`+"  productos de tipo " +`${item.nombre}` );
-      addItem(btnClick);
-      console.log(addItem)
-      console.log(estadoA)
+      addItem(parseInt(estadoA)  + parseInt(btnClick));
+      console.log(parseInt(estadoA) + parseInt(btnClick))
       console.log(btnClick)
     }
   };
