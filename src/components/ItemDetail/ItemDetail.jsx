@@ -4,9 +4,9 @@ import './ItemDetail.css'
 import { useParams } from "react-router-dom";
 import Data from "../../Data/productsData";
 import ItemCount from '../ItemCount/ItemCount';
+import ProductCard from '../ProductCard/ProductCard';
 
-
-const ItemDetail = () => {
+const ItemDetail = ({product}) => {
 
   const { estadoA,addItem } = useContext(Shop);
 
@@ -41,10 +41,10 @@ const ItemDetail = () => {
       console.log(btnClick)
     }
   };
-
+console.log(product)
   return (
     <div className='ItemDetail'>
-        <h1>{item.title}</h1>
+        {/* <h1>{item.title}</h1>
         <img className='img' src={item.image} alt={item.title}></img>
         <ItemCount 
         btnClick = {btnClick}
@@ -53,7 +53,10 @@ const ItemDetail = () => {
         handleClickMinus = {handleClickMinus}
         handleClickPlus = {handleClickPlus}
         />
-        <p>{item.itemDetail}</p>
+        <p className='description'>{item.description}</p> 
+        {console.log(product)}
+        
+*/}<ProductCard product = {product}></ProductCard>
     </div>
   )
 }

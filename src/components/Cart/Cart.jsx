@@ -8,7 +8,6 @@ export const Cart = () => {
 
   const {estadoA} = useContext(Shop);
   useEffect(() => {
-  console.log(estadoA)
   setNumber(estadoA)
   }, [estadoA])
   

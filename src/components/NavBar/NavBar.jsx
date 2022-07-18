@@ -16,7 +16,9 @@ const Navbar = () => {
         <Link to="/about">Acerca de nosotros</Link>
 
       </div>
+      <Link to="/cart">
       <Cart/>
+      </Link>
       <div
         className={`nav-toggle ${isOpen && "open"}`}
         onClick={() => setIsOpen(!isOpen)}
