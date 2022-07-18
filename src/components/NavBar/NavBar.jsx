@@ -7,11 +7,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="Navbar">
-      <span className="nav-logo">Amaretto Kids</span>
+      <span className="nav-logo">Amaretto</span>
       <div className={`nav-items ${isOpen && "open"}`}>
         <Link to="/home">Home</Link>
-        {/* <Link to="/category/niños">Niños</Link>
-        <Link to="/category/niñas">Niñas</Link> */}
+        <Link to="/category/gorras">Gorras</Link>
+        <Link to="/category/remeras">Remeras</Link> 
+        <Link to="/category/camisas">Camisas</Link>
         <Link to="/about">Acerca de nosotros</Link>
 
       </div>

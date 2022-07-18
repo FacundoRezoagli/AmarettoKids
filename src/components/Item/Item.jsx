@@ -2,7 +2,7 @@ import {React, useState }from "react";
 import "./Item.css";
 import { useNavigate } from "react-router-dom";
 
-const Item = ({stock , url, producto, cod}) => {
+const Item = ({stock , url, producto, id}) => {
 
     const [contador, setContador] = useState(0);
 
@@ -16,7 +16,7 @@ const Item = ({stock , url, producto, cod}) => {
     const navigate = useNavigate();
 
     const handleDetail = () => {
-        navigate('/detail/' + cod)
+        navigate('/detail/' + id)
     }
     return(
         <div className="itemContainer" >
@@ -26,13 +26,7 @@ const Item = ({stock , url, producto, cod}) => {
             <img className="itemImage" src={url} alt={producto}/>
 
             <div className="itemDisplay">
-            <button className="itemDetailButton" onClick={handleDetail} >Ver detalle del producto</button> 
-                <h1 className="itemStock">{contador} / {stock}</h1>
-                <div className="itemButtons">
-                    <button className="amountButton"  onClick={() => count(-1)}>-</button>               
-                    <button className="amountButton" onClick={() => count(+1)}>+</button>
-                    <button className="cartAddButton"> Agregar al carrito</button>
-                </div>
+            <button className="itemDetailButton" onClick={handleDetail} >Ver detalle del producto</button>
             </div>
         </div>
     )

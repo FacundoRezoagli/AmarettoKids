@@ -12,9 +12,9 @@ const ItemDetail = () => {
 
   const { productId } = useParams();
 
-  const [btnClick, setBtnClick] = useState(1);
+  const [btnClick, setBtnClick] = useState(0);
 
-  const item = Data.find((elemento) => elemento.cod.toString() === productId)
+  const item = Data.find((elemento) => elemento.id.toString() === productId)
 
   const handleClickPlus = () => {
     if (btnClick >= item.stock) {
@@ -44,8 +44,8 @@ const ItemDetail = () => {
 
   return (
     <div className='ItemDetail'>
-        <h1>{item.nombre}</h1>
-        <img className='img' src={item.imagen} alt={item.nombre}></img>
+        <h1>{item.title}</h1>
+        <img className='img' src={item.image} alt={item.title}></img>
         <ItemCount 
         btnClick = {btnClick}
         stock = {item.stock}

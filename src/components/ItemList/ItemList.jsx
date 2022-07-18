@@ -7,7 +7,7 @@ export const ItemList = ({products}) => {
     <div className="itemListContainer">
 
       {products.map((product) => (
-        <Item url = {product.imagen} stock = {product.stock} producto = {product.nombre} cod = {product.cod}/>
+        <Item url = {product.image} stock = {product.stock} producto = {product.title} id = {product.id}/>
       ))}
 
     </div>
