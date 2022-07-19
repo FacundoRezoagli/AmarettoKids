@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./ProductCard.css";
-const ProductCard = ({ product }) => {
-  console.log(product);
+const ProductCard = ({ product } ) => {
+  //console.log(product);
+  const navigate = useNavigate();
 
+  const handleDetail = (num) => {
+    console.log(num)
+      navigate("/detail/" + product.id);
+    }
   return (
     <div className="productcard">
       <title>{product.title}</title>
@@ -24,7 +30,9 @@ const ProductCard = ({ product }) => {
             <p>
               <span>{product.price}</span>$
             </p>
-            <button type="button">buy now</button>
+            <button type="button" onClick={handleDetail}>
+              Comprar
+            </button>
           </div>
         </div>
       </div>

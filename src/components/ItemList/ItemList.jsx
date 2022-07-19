@@ -1,5 +1,6 @@
 import React from "react";
-import Item from "../Item/Item";
+import Item from "../Item-componente-no-usado/Item";
+import ProductCard from '../ProductCard/ProductCard';
 
 import './ItemList.css'
 export const ItemList = ({products}) => {
@@ -7,7 +8,8 @@ export const ItemList = ({products}) => {
     <div className="itemListContainer">
 
       {products.map((product) => (
-        <Item url = {product.image} stock = {product.stock} producto = {product.title} id = {product.id}/>
+        // <Item url = {product.image} stock = {product.stock} producto = {product.title} id = {product.id}/>
+        <ProductCard product = {product}></ProductCard>
       ))}
 
     </div>

@@ -22,10 +22,11 @@ export default function ItemCount({
     <div className="itemDisplay">
                 <h1 className="itemStock">{contador} / {stock}</h1>
                 <div className="itemButtons">
-                <button className="amountButton"  onClick={() => count(-1)}>-</button>               
-                <button className="amountButton" onClick={() => count(1)}>+</button>
+                 <button className="amountButton"  onClick={() => count(-1)}>-</button>  
                 <button className="cartAddButton" onClick={() => onAdd(btnClick)} > Agregar al carrito</button>
+                <button className="amountButton" onClick={() => count(1)}>+</button>
                 </div>
+                
             </div>
   );
 }

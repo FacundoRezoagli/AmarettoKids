@@ -1,0 +1,73 @@
+ .cartAddButton
+{
+    margin-left: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 160px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #5ddeb9;
+    cursor: pointer;
+    outline: none;
+    left: 300px;
+}
+.amountButton
+{
+    margin-left: 10px;
+    display: inline-block;
+    height: 23px;
+    width: 50px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #000000;
+    background-color: #03bccd;
+    cursor: pointer;
+    outline: none;
+    left: 300px;
+    
+}
+.itemImage
+{
+    height: 240px;
+}
+.itemContainer
+{
+    text-align: center;
+    height: auto;
+}
+.itemStock
+{
+    font-size: medium;
+    margin-bottom: 5px
+}
+.itemDetailButton
+{
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+    
+} 
+.itemDisplay
+{
+    text-align: center;
+}
+
+.amountButton:hover {
+    background-color: #79b0a1;
+  }
+  .cartAddButton:hover {
+    background-color: #79b0a1;
+  }

@@ -5,7 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import NotFound from './components/NotFound/NotFound';
 import ShopProvider from './components/ShopProvider/ShopProvider';
-import CartView from './components/CartView/CartView';
+import CartView from './components/NavBar/NavBar';
 function App() {
   return (
   <ShopProvider>

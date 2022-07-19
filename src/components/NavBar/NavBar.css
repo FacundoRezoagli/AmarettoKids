@@ -1,9 +1,12 @@
 .Navbar {
+  z-index: 999999;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #5265c4;
+    position: fixed;
+    width: 100%;
   }
   
   .Navbar > .nav-logo {
