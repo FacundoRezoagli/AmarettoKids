@@ -1,6 +1,9 @@
 .CartViewContainer
-{border: 1px solid red;
-  padding-top: 80px;
+{
+  border: 1px solid red;
   background: #abb0f0;
-  padding-bottom: 1px;
+  height: 100%;
+  width: 100%px;
+  padding-top: 90px;
+  text-align: center;
 }

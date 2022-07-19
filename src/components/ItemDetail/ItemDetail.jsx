@@ -1,13 +1,17 @@
 import { React, useState, useContext  } from "react";
-import { Shop } from "../ShopProvider/ShopProvider";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import ProductCardDetail from "../ProductCardDetail/ProductCardDetail";
+
+import { Shop } from "../ShopProvider/ShopProvider";
+import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({ product }) => {
   const { estadoA, addItem } = useContext(Shop);
 
   const [btnClick, setBtnClick] = useState(0);
+
+  const { addToCart } = useContext(CartContext);
 
   const handleClickPlus = () => {
     if (btnClick >= product.stock) {
@@ -36,6 +40,7 @@ const ItemDetail = ({ product }) => {
       );
       addItem(parseInt(estadoA) + parseInt(btnClick));
       setBtnClick(0);
+      addToCart(product,btnClick)
     }
   };
 
