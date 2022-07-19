@@ -1,15 +1,11 @@
-import { React, useState, useContext } from "react";
+import { React, useState, useContext  } from "react";
 import { Shop } from "../ShopProvider/ShopProvider";
 import "./ItemDetail.css";
-import { useParams } from "react-router-dom";
-import Data from "../../Data/productsData";
 import ItemCount from "../ItemCount/ItemCount";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCardDetail from "../ProductCardDetail/ProductCardDetail";
 
 const ItemDetail = ({ product }) => {
   const { estadoA, addItem } = useContext(Shop);
-
-  const { productId } = useParams();
 
   const [btnClick, setBtnClick] = useState(0);
 
@@ -27,7 +23,7 @@ const ItemDetail = ({ product }) => {
     setBtnClick(btnClick - 1);
   };
 
-  const onAdd = (btnClick) => {
+  const onAdd = (btnClick, product) => {
     if (btnClick === 0) {
       return;
     } else {
@@ -36,23 +32,24 @@ const ItemDetail = ({ product }) => {
         "se agregaron : " +
           `${btnClick}` +
           "  productos de tipo " +
-          `${product.nombre}`
+          `${product.title}`
       );
       addItem(parseInt(estadoA) + parseInt(btnClick));
-      console.log(parseInt(estadoA) + parseInt(btnClick));
-      console.log(btnClick);
       setBtnClick(0);
     }
   };
+
+
   return (
     <div className="ItemDetail">
-      <ProductCard product={product}></ProductCard>
+      <ProductCardDetail product={product}></ProductCardDetail>
       <ItemCount
         btnClick={btnClick}
         stock={product.stock}
         onAdd={onAdd}
         handleClickMinus={handleClickMinus}
         handleClickPlus={handleClickPlus}
+        product={product}
       />
     </div>
   );

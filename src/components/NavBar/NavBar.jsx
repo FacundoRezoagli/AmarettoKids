@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link to="/about">Acerca de nosotros</Link>
 
       </div>
-      <Link to="/cart">
+      <Link to="/cart" style={{textDecoration:"none"}}>
       <Cart/>
       </Link>
       <div

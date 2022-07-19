@@ -1,8 +1,7 @@
 import React from "react";
-import Item from "../Item-componente-no-usado/Item";
 import ProductCard from '../ProductCard/ProductCard';
-
 import './ItemList.css'
+
 export const ItemList = ({products}) => {
   return (
     <div className="itemListContainer">

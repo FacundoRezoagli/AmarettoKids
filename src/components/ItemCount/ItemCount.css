@@ -50,6 +50,22 @@
 }
 .itemStock
 {
+    margin-left: 10px;
+    display: inline-block;
+    height: 23px;
+    width: 60px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #03bccd;
+    cursor: pointer;
+    outline: none;
+    left: 300px;
     font-size: medium;
     margin-bottom: 5px
 }

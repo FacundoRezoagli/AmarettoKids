@@ -1,5 +1,6 @@
 .cartContainer
 {
+   
     width: 80px;
     height: 22px;
     cursor: pointer;
@@ -13,6 +14,7 @@
 
 .cartNumber
 {
+    
     width: 25px; 
     height: 25px;
     font-size: medium;
