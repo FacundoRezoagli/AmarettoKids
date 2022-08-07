@@ -3,6 +3,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import './ItemList.css'
 
 export const ItemList = ({products}) => {
+  console.log(products)
   return (
     <div className="itemListContainer">
 
@@ -10,13 +11,10 @@ export const ItemList = ({products}) => {
         // <Item url = {product.image} stock = {product.stock} producto = {product.title} id = {product.id}/>
         <ProductCard product = {product}></ProductCard>
       ))}
-
     </div>
   );
 };
 export default ItemList;
-
-
 
 /* 
 import img1 from '../../assets/Img/img1.jpg'

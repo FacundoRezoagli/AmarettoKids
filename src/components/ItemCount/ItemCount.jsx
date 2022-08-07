@@ -28,8 +28,8 @@ export default function ItemCount({
     value > 0 ? handleClickPlus() : handleClickMinus();
   };
 
-  console.log(product);
-  console.log(btnClick);
+  // console.log(product);
+  // console.log(btnClick);
 
   useEffect(() => {}, [btnClick]);
 

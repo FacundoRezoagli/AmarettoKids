@@ -44,7 +44,7 @@ const ItemDetail = ({ product }) => {
     }
   };
 
-
+  console.log(product)
   return (
     <div className="ItemDetail">
       <ProductCardDetail product={product}></ProductCardDetail>
