@@ -27,11 +27,11 @@ const ProductCardDetail = ({ product } ) => {
           </div>
           <div className="product-price-btn">
             <p>
-              <span>{product.price}</span>$
+              <span>Precio:{product.price}</span>$
             </p>
-            <button type="button" onClick={handleDetail}>
-              Finalizar Compra
-            </button>
+            {/* <button type="button" onClick={handleDetail}>
+              Ver Carrito
+            </button> */}
           </div>
         </div>
       </div>

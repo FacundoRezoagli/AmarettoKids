@@ -1,5 +1,12 @@
 import { React, useState, useEffect } from "react";
 import "./ItemCount.css";
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
+
 
 export default function ItemCount({
   btnClick,
@@ -9,6 +16,8 @@ export default function ItemCount({
   handleClickPlus,
   product,
 }) {
+  const navigate = useNavigate();
+
   const [contador, setContador] = useState(1);
 
   const count = (value) => {
@@ -44,7 +53,11 @@ export default function ItemCount({
         <button className="amountButton" onClick={() => count(1)}>
           +
         </button>
+        
       </div>
+      <button className="cartAddButton2" onClick={() => navigate("/cart")}>
+          Ir al carrito
+        </button>
     </div>
   );
 }
