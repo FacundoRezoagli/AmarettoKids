@@ -2,14 +2,14 @@ import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 import "../CartView/CartView.css";
-import { addDoc, collection} from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase/config";
 
 const Cart = () => {
-  const { cart, deleteItem, calcularTotal } = useContext(CartContext);
+  const { cart, deleteItem, calcularTotal, emptyCart } = useContext(CartContext);
   // const total = calcularTotal()
-  console.log(cart);
-  console.log(calcularTotal());
+  //console.log(cart);
+  //console.log(calcularTotal());
 
   if (cart.length === 0) {
     return <h2>Está vacío tu carrito, andá a comprar</h2>;
@@ -18,8 +18,10 @@ const Cart = () => {
   const confirmarOrden = async () => {
     const order = ordenGenerada("UsuarioAqui", "DomicilioAqui");
     //guardarOrden(orden);
-    const docRef = await addDoc(collection(db, "orders"),order);
-    console.log("document written with ID: ", docRef.id);  
+    const docRef = await addDoc(collection(db, "orders"), order);
+    console.log("document written with ID: ", docRef.id);
+    alert("Orden generada con exito! ID de la orden: " + docRef.id);
+    emptyCart();
   };
 
   const ordenGenerada = (user, adress) => {

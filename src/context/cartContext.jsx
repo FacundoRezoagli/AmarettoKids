@@ -6,6 +6,11 @@ const CartProvider = (props) => {
     //console.log(props);
     const [cart, setCart] = useState([]);
 
+    const emptyCart = () =>
+    {
+        setCart([]);
+    }
+
     const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
             sumarCantidad(item.id, cantidad);
@@ -42,7 +47,7 @@ const CartProvider = (props) => {
 
     return (
         <CartContext.Provider
-            value={{ cart, addToCart, deleteItem, calcularTotal }}
+            value={{ cart, addToCart, deleteItem, calcularTotal, emptyCart }}
         >
             {props.children}
         </CartContext.Provider>
